@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "containers": [
+      {
+        "name": "socket-server",
+        "properties": {
+          "command": [],
+          "image": "containerinstance/socket-server:20180731",
+          "ports": [
+            {
+              "port": 1337
+            }
+          ],
+          "resources": {
+            "requests": {
+              "cpu": 1,
+              "memoryInGb": 1.5
+            }
+          }
+        }
+      },
+      {
+        "name": "socket-client",
+        "properties": {
+          "command": [],
+          "image": "containerinstance/socket-client:20180731",
+          "ports": [],
+          "resources": {
+            "requests": {
+              "cpu": 1,
+              "memoryInGb": 1.5
+            }
+          }
+        }
+      }
+    ],
+    "osType": "Linux",
+    "ipAddress": {
+      "ports": [
+        {
+          "protocol": "TCP",
+          "port": 1337
+        }
+      ],
+      "type": "Public"
+    }
+  },
+  "location": "westus"
+}
