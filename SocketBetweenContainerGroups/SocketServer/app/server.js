@@ -5,7 +5,7 @@ function getTimePrefix() {
 }
 
 var server = net.createServer(function(socket) {
-    socket.on('data', function(data){
+    socket.on('data', function(data) {
         textChunk = data.toString('utf8');
         console.log(getTimePrefix() + textChunk);
         socket.write(textChunk);
