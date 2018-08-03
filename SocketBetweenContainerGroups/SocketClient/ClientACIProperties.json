@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "containers": [
+      {
+        "name": "socket-client",
+        "properties": {
+          "command": [],
+          "environmentVariables": [
+            {
+              "name": "SOCKET_SERVER_HOST",
+              "value": "<YourSocketServerIP>"
+            },
+            {
+              "name": "SOCKET_SERVER_PORT",
+              "value": "<YourSocketServerPort>"
+            }
+          ],
+          "image": "containerinstance/socket-client:20180802",
+          "ports": [
+            {
+              "port": 80
+            }
+          ],
+          "resources": {
+            "requests": {
+              "cpu": 1,
+              "memoryInGb": 1.5
+            }
+          }
+        }
+      }
+    ],
+    "osType": "Linux",
+    "ipAddress": {
+      "ports": [
+        {
+          "protocol": "TCP",
+          "port": 80
+        }
+      ],
+      "type": "Public"
+    }
+  },
+  "location": "westus"
+}
